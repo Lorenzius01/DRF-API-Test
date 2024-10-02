@@ -1,6 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django,windows
 
+### .exe 확장자는 보통, 윈도우 실행파일이잖아요?
+### 나는 리눅스라 사용하지 못하고? 맥 유저도 사용을 못하니까, 전체를 뺍시다. 그러면
+*.exe
+broad_ex/drf_board_ex/
+broad_ex/drf_board_ex/drf_baord/broad_front/
+
 ### Django ###
 *.log
 *.pot
