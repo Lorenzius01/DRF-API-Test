@@ -10,12 +10,12 @@ local_settings.py
 db.sqlite3-journal
 media
 board_ex/.conda/
-board_ex/drf_board_curd/migrations/
+board_ex/drf_board_curd/migrations
 board_ex/drf_board/db.sqlite3
 board_ex/drf_board/sqldiff.exe
 board_ex/drf_board/sqlite3_analyzer.exe
 board_ex/drf_board/sqlite3.exe
-broad_ex/drf_board_ex/
+broad_ex/drf_board_ex
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
