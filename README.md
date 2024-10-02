@@ -1,3 +1,5 @@
+Python = 3.12.6
+
 board_ex\drf_board > python manage.py runserver
 
 - board_ex\drf_board\drf_board\settings.py
