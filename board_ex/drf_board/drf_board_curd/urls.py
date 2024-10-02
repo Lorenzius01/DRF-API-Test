@@ -16,15 +16,20 @@ Including another URLconf
 """
 
 from django.urls import path, include
-from rest_framework import routers
+from rest_framework.routers import SimpleRouter
 from .views import *
 
-#router = routers.DefaultRouter()
-#router.register(r'board', BoardViewSet),
-#router.register(r'board/post', PostViewSet)
+# 맨 뒤 슬래시 제거
+class CustomSimpleRouter(SimpleRouter): 
+    def __init__(self):
+        super().__init__(trailing_slash=False)  # 슬래시를 없앰
+
+router = CustomSimpleRouter()
+router.register('board', BoardViewSet)
 
 urlpatterns = [
-    path('', BoardViewSet.as_view()),
-    path('<int:pk>', BoardViewSet.as_view()),
+    #path('', BoardViewSet.as_view()),
+    #path('<int:pk>', BoardViewSet.as_view()),
+    path('', include(router.urls)),
 ]
 
