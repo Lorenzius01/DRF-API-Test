@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework', # drf 사용을 위한 추가.
     'drf_board_curd', # 내가 생성한 app 이름.
-    'corsheaders',
+    'corsheaders', # react 연결
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',     # <- 추가
-    'django.middleware.common.CommonMiddleware', # <- 추가
+    'corsheaders.middleware.CorsMiddleware',     # <- react 연결 추가
+    'django.middleware.common.CommonMiddleware', # <- react 연결 추가
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -68,7 +68,7 @@ CORS_ALLOW_METHODS = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
+    'http://localhost:3000', # react
 ]
 
 ROOT_URLCONF = 'drf_board.urls'

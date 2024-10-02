@@ -6,7 +6,6 @@ from rest_framework import status
 
 
 # Create your views here.
-
 class BoardViewSet(APIView): # localhost가 안되면 127.0.0.1로 바꿔서
     def get(self, request, pk=None): # read
         if pk is None:
